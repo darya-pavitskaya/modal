@@ -15,4 +15,12 @@ for (let i = 0; i < btnsOpenModal.length; i++) {
   btnCloseModal.addEventListener('click', toggleModal);
 }
 
+btnCloseModal.addEventListener('click', toggleModal);
 overlay.addEventListener('click', toggleModal);
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    modal.classList.add('hidden');
+    overlay.classList.add('hidden');
+  }
+});
